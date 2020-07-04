@@ -1,0 +1,22 @@
+# BEGIN WordPress
+# Las directivas (líneas) entre `BEGIN WordPress` y `END WordPress` se generan dinámicamente
+# , y solo se deberían modificar mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores se sobreescribirán.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+
+    # add a trailing slash to /wp-admin
+    RewriteRule ^wp-admin$ wp-admin/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^(wp-.*.php)$ wordpress/$1 [L]
+    RewriteRule ^(wp-(content|admin|includes).*) wordpress/$1 [L]
+    RewriteRule ^(.*\.php)$ wordpress/$1 [L]
+    RewriteRule . index.php [L]
+</IfModule>
+
+# END WordPress
