@@ -8,7 +8,8 @@
         "roots/wp-password-bcrypt": "^1.0",
         "koodimonni/composer-dropin-installer": "^1.2",
         "composer/installers": "^1.8",
-        "vlucas/phpdotenv": "^5.0"
+        "vlucas/phpdotenv": "^5.0",
+	"wpackagist-theme/twentyseventeen": "^2.3"
     },
     "license": "MIT",
     "authors": [
