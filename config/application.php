@@ -189,7 +189,7 @@ if (getenv('WPMS_ON') === 'true') {
 Config::define('ACF_LITE', true);
 
 /** WordPress Error Handler */
-Config::define('RECOVERY_MODE_EMAIL', 'devxp@kingeclient.com');
+Config::define('RECOVERY_MODE_EMAIL', 'recovery@mail.com');
 
 /** Load custom configs according to WP_ENV environment variable */
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
